@@ -30,8 +30,11 @@ public:
 	//Set the rank of the card
 	void setRank(string rank);
 
-	//Gets the card value
-	string getCard();
+	//Gets the address of a card
+	card* getCard();
+
+	//Gets the card value 
+	string getCardValue();
 
 	//Checks whether or not the card is a joker
 	bool isJoker();

@@ -1,4 +1,5 @@
 #include "card.h"
+#include <iostream>
 
 //Constructor that takes in no arguments, initializes the card as "XX"
 card::card() {
@@ -32,14 +33,20 @@ void card::setRank(string rank) {
 	this->rank = rank;
 }
 
-//Gets the card value 
-string card::getCard() {
-	return rank + suit;
+//Gets the card address
+card* card::getCard() {
+	return this;
 }
+
+//Prints the card out to console 
+string card::getCardValue() {
+	return this->suit + this->rank;
+}
+
 
 //Returns false for a card object, true for a joker (derived from card)
 bool card::isJoker() {
-	if (getCard() == "J1" || getCard() == "J2" || getCard() == "J3") {
+	if (getCardValue() == "J1" || getCardValue () == "J2" || getCardValue() == "J3") {
 		return true;
 	}
 	return false;

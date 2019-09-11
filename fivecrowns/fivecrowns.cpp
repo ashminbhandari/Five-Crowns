@@ -1,12 +1,9 @@
 #include <iostream>
-#include "deck.h"
+#include "gameRound.h"
 
 int main()
 {
-	deck myDeck;
-	myDeck.initialize();
-	myDeck.print();
-	myDeck.shuffle();
-	myDeck.print();
-	return 0;
+	gameRound r;
+	r.dealCards();
+	system("pause");
 }
