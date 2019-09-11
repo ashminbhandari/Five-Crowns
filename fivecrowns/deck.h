@@ -1,16 +1,20 @@
 #include "card.h"
+#include <vector>
 
 using namespace std;
 
 class deck {
 	
 private:
-	card deck[58]; //A deck consists of 58 cards, thus an array of 58 cards is created 
+	vector<card> deck; //A deck for this game consists of 116 cards (58 in each)
 
 public:
 	//Initializes the deck
-	void initializeDeck();
+	void initialize();
 
 	//Prints the deck out to console 
-	void printDeck();
+	void print();
+
+	//Shuffle the deck
+	void shuffle();
 };

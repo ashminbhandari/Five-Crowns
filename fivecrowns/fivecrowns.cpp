@@ -4,7 +4,9 @@
 int main()
 {
 	deck myDeck;
-	myDeck.initializeDeck();
-	myDeck.printDeck();
+	myDeck.initialize();
+	myDeck.print();
+	myDeck.shuffle();
+	myDeck.print();
 	return 0;
 }

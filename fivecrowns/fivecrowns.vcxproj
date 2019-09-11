@@ -158,6 +158,8 @@
   <ItemGroup>
     <ClInclude Include="card.h" />
     <ClInclude Include="deck.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="round.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

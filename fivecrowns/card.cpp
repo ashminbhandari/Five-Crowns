@@ -1,8 +1,15 @@
 #include "card.h"
 
+//Constructor that takes in no arguments, initializes the card as "XX"
 card::card() {
 	suit = "X"; //Default value for suit 
 	rank = "X"; //Default value for rank 
+}
+
+//Constructor that takes in two string arguments, intializes the card accordingly
+card::card(string rank, string suit) {
+	this->rank = rank;
+	this->suit = suit;
 }
 
 //Gets the suit of the card
@@ -30,8 +37,10 @@ string card::getCard() {
 	return rank + suit;
 }
 
-//If the card is a joker, set the 
-void card::isJoker(int jokerNo) {
-	this->rank = "J";
-	this->suit = to_string(jokerNo);
+//Returns false for a card object, true for a joker (derived from card)
+bool card::isJoker() {
+	if (getCard() == "J1" || getCard() == "J2" || getCard() == "J3") {
+		return true;
+	}
+	return false;
 }

@@ -15,6 +15,9 @@ public:
 	//Constructor 
 	card();
 
+	//Constructor that takes in two string arguments 
+	card(string, string);
+
 	//Get the suit of the card
 	string getSuit();
 
@@ -30,6 +33,6 @@ public:
 	//Gets the card value
 	string getCard();
 
-	//Takes an integer value and defines a joker accordingly. For example, if 1 is supplied the joker is defined as "J1"
-	void isJoker(int);
+	//Checks whether or not the card is a joker
+	bool isJoker();
 };
