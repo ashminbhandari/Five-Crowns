@@ -1,14 +1,25 @@
 #pragma once
-#include "hand.h"
+#include "card.h"
+#include <vector>
 
 class player {
 private:
-	hand theHand;
+	vector <card> hand;
+
+protected:
+	//Pick a card from the draw pile, to be redefined in child classes
+	virtual void pickCard();
+
+	//Drops a card to the discard pile, to be redefined in child classes
+	virtual void dropCard();
 
 public:
-	//Gets a pointer to player's hand object
-	hand* getHand();
+	//Gets the players hand 
+	vector <card>* getHand(); 
+
+	//Take their turn, to be redefined in child classes
+	virtual void takeTurn();
 
 	//Prints out the players hand to screen
-	void print();
+	void printHand();
 };

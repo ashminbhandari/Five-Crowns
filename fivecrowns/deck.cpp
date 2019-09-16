@@ -1,5 +1,7 @@
 #include "deck.h"
 #include <algorithm>
+#include <ctime>
+#include <iterator>
 
 //The instance of the deck is initialized as null
 deck* deck::instance = 0;
@@ -29,28 +31,29 @@ deck::deck() {
 		collection.push_back(card("J", "2"));
 		collection.push_back(card("J", "3"));
 	}
-
-	cout << "Address of " << collection[5].getCardValue() << " is " << &collection[5] << endl;
-
-	card* a = collection[2].getCard();
-
-	cout << "Address of " << a->getCardValue() << " is " << a << endl;
-
 }
 
 //Prints out the deck to the console
-void deck::print() {
-	for (int i = 0; i < 116; i++) {
-		cout << collection[i].getCardValue() << endl;
-	}
+void deck::printDeck() {
+	cout << "Currently, the cards in the deck are : ";
 }
 
 //Shuffles the deck randomly using random_shuffle provided by the algorithm library
-void deck::shuffle() {
+void deck::shuffleDeck() {
+	srand(unsigned(time(0)));
 	random_shuffle(collection.begin(), collection.end());
 }
 
-//Gets the address of the card at a given index
-card* deck::getCardAt(int index) {
-	return &collection[index];
+//Removes the card at the top
+void deck::removeCardAtTop() {
+	collection.erase(collection.begin());
+}
+
+//Gets the deck size
+int deck::getDeckSize() {
+	return this->collection.size();
+}
+
+card deck::getCardAt(int index) {
+	return this->collection[index];
 }

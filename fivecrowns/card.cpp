@@ -33,9 +33,9 @@ void card::setRank(string rank) {
 	this->rank = rank;
 }
 
-//Gets the card address
-card* card::getCard() {
-	return this;
+//Gets the card object
+card card::getCard() {
+	return *this;
 }
 
 //Prints the card out to console 

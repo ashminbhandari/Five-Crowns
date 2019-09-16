@@ -152,16 +152,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="card.cpp" />
+    <ClCompile Include="computer.cpp" />
     <ClCompile Include="deck.cpp" />
     <ClCompile Include="fivecrowns.cpp" />
-    <ClCompile Include="hand.cpp" />
+    <ClCompile Include="human.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="gameRound.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="card.h" />
+    <ClInclude Include="computer.h" />
     <ClInclude Include="deck.h" />
-    <ClInclude Include="hand.h" />
+    <ClInclude Include="human.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="gameRound.h" />
   </ItemGroup>

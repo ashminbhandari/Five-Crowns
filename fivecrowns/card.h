@@ -31,7 +31,7 @@ public:
 	void setRank(string rank);
 
 	//Gets the address of a card
-	card* getCard();
+	card getCard();
 
 	//Gets the card value 
 	string getCardValue();

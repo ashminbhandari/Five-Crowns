@@ -4,6 +4,6 @@
 int main()
 {
 	gameRound r;
-	r.dealCards();
+	r.start();
 	system("pause");
 }
