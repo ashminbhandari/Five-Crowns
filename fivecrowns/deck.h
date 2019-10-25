@@ -14,18 +14,24 @@ private:
 	deck();
 
 	//The vector that holds the card objects
-	vector<card> collection; //Collection of cards required for the game (58 in each, total 116 cards)
+	vector <card> collection; //Collection of cards required for the game (58 in each, total 116 cards)
 
 public:
 	//Static accessor method 
 	static deck* getDeck();
 
 	//Prints the deck out to console 
-	void print();
+	void printDeck();
 
 	//Shuffles the deck
-	void shuffle();
+	void shuffleDeck();
 
-	//Gets pointer to a card at certain location
-	card* getCardAt(int);
+	//Gets a card at certain location
+	card getCardAt(int);
+
+	//Removes the card at the top
+	void removeCardAtTop();
+
+	//Gets the size of the deck
+	int getDeckSize();
 };

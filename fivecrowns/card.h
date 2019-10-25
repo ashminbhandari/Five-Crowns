@@ -31,11 +31,17 @@ public:
 	void setRank(string rank);
 
 	//Gets the address of a card
-	card* getCard();
+	card getCard();
 
 	//Gets the card value 
 	string getCardValue();
 
 	//Checks whether or not the card is a joker
 	bool isJoker();
+
+	//Get the rank value 
+	int getRankValue();
+
+	//Get the suit value 
+	int getSuitValue();
 };
