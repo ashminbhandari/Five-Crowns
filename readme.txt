@@ -61,7 +61,9 @@ function overriding aka polymorphism is used here.
 This class helps to serialize the game. Saving and loading is done with the help of this class.
 
 Log
+
 September 8, 2019 -
+
 ● Thought about the basic class design and worked on the implementation.
 ● Wrote out the simple class structure for card and deck in code
 
