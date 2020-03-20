@@ -1,3 +1,6 @@
+Android implementation: https://github.com/ashminbhandari/FiveCrowns-Android
+Python implemenation: https://github.com/ashminbhandari/Five-Crowns-Python 
+
 Five Crowns Manual
 
 Improvements made:
